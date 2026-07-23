@@ -3,7 +3,7 @@ import cors from 'cors'
 import 'dotenv/config'
 import connectDB from './configs/db.js';
 import session from 'express-session'
-import MongoStore from 'connect-mongo';
+import MongoStore from "connect-mongo";
 import AuthRouter from './routes/AuthRoutes.js';
 import ThumbnailRouter from './routes/ThumbnailRoutes.js';
 import UserRouter from './routes/UserRoutes.js';
@@ -20,6 +20,7 @@ declare module 'express-session' {
 await connectDB()
 
 const app = express();
+
 
 app.use(cors({
     origin: ['http://localhost:5173', 'http://localhost:3000'],
